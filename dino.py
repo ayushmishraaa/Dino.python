@@ -21,7 +21,8 @@ bg_color = white
 def load_image(name, size=None):
     path = os.path.join('resources', name)
     image = pygame.image.load(path).convert()
-    image = pygame.transform.scale(image, size) if size else image
+    image = pygame.transform.scale(image, size)
+ if size else image
     return pygame.transform.threshold(image, black, (0, 0, 0), 0, pygame.THRESHOLD_SIMPLE)
 
 def load_sprite_sheet(name, cols, rows, size=None):
